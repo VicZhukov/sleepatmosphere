@@ -1,0 +1,490 @@
+/*============    ШРИФТЫ    ===========*/
+@font-face {
+    font-family: 'pfdintextcondprobold';
+    src: url('fonts/pfdintextcondprobold.eot');
+    src: url('fonts/pfdintextcondprobold.eot') format('embedded-opentype'),
+         url('fonts/pfdintextcondprobold.woff2') format('woff2'),
+         url('fonts/pfdintextcondprobold.woff') format('woff'),
+         url('fonts/pfdintextcondprobold.ttf') format('truetype'),
+         url('fonts/pfdintextcondprobold.svg#pfdintextcondprobold') format('svg');
+}
+@font-face {
+    font-family: 'pfdintextcondprolight';
+    src: url('fonts/pfdintextcondprolight.eot');
+    src: url('fonts/pfdintextcondprolight.eot') format('embedded-opentype'),
+         url('fonts/pfdintextcondprolight.woff2') format('woff2'),
+         url('fonts/pfdintextcondprolight.woff') format('woff'),
+         url('fonts/pfdintextcondprolight.ttf') format('truetype'),
+         url('fonts/pfdintextcondprolight.svg#pfdintextcondprolight') format('svg');
+}
+@font-face {
+    font-family: 'pfdintextcondpromedium';
+    src: url('fonts/pfdintextcondpromedium.eot');
+    src: url('fonts/pfdintextcondpromedium.eot') format('embedded-opentype'),
+         url('fonts/pfdintextcondpromedium.woff2') format('woff2'),
+         url('fonts/pfdintextcondpromedium.woff') format('woff'),
+         url('fonts/pfdintextcondpromedium.ttf') format('truetype'),
+         url('fonts/pfdintextcondpromedium.svg#pfdintextcondpromedium') format('svg');
+}
+
+.bold{
+	font-family: "pfdintextcondprobold";
+}
+.med{
+	font-family: "pfdintextcondpromedium";
+}
+.light{
+	font-family: "pfdintextcondprolight";
+}
+/*===================    базовые настройки    =================*/
+a:hover,
+a:focus,
+a:visited,
+a:active{
+    text-decoration: none;
+}
+.section_header h2{
+    text-transform: uppercase;
+    color: #666666;
+    .bold;
+}
+button:focus{
+    outline: none;
+}
+.no-margins{
+        margin-right: 0px !important;
+        margin-left: 0px !important;
+}
+
+/*===================    Шапка    =================*/
+header{
+    color: #666666;
+    padding-top: 5px;
+    padding-bottom: 25px;
+    height: 150px;
+    .logotype{
+        h5{
+            .light;
+            text-transform: uppercase;
+            font-size: 15px;
+        }
+    }
+    .descript{
+        h3{
+            .med;
+            text-transform: uppercase;
+        }
+
+        h4{
+            .light;
+            font-size: 15px;
+        }
+    }
+    .phone_number{
+        text-align: right;
+        p {
+                .light
+            }
+        a{
+            .med;
+            color: #666666;
+            &:hover {
+                text-decoration: none;
+            }
+        display: inline-block;
+        &:before{
+            margin-right: 5px;
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: url(../img/phone_on_32.png) no-repeat center center;
+            display: inline-block;
+            }
+
+        }
+    }
+}
+
+/*============    NAvigation    ===========*/
+nav{
+    background-color: #fafdfa;
+    ul.list-inline a{
+        .light;
+        display: inline-block;
+        text-transform: uppercase;
+        padding: 20px ;
+        color: #666666;
+            -moz-transition: all 0.2s 0.02s ease;
+            -o-transition: all 0.2s 0.02s ease;
+            -webkit-transition: all 0.2s 0.02s ease;
+        &:hover{
+            text-decoration: none;
+            background-color: #FFC0C0;
+            color: #fff;
+        }
+    }
+        ul.list-inline{
+            margin-bottom: 0px;
+        }
+       top: 150px; /*высота шапки в пикселях*/
+       position: fixed;
+       z-index: 100;
+       width: 100%;
+}
+/*====================   Главные экран   ===================*/
+section#main{
+    background: url(../img/main_bg_1920.jpg) no-repeat center center;
+    background-size: cover;
+    .main_header{
+        h1{
+            margin-top: 100px;
+            margin-bottom: 90px;
+            .bold;
+            color: #fff;
+            text-transform: uppercase;
+            span{
+                background-color: #FFC0C0;
+                padding: 5px;
+            }
+        }
+    }
+    h3, h4{
+        text-transform: uppercase;
+        .bold;
+        color: #666666;
+    }
+    .main_buttons{
+        margin-bottom: 70px;
+        margin-top: 7px;
+        button#get_call {
+            border: none;
+            background-color: #FFC0C0;
+            padding: 17px 35px;
+            color: #666666;
+                -moz-transition: all 0.2s 0.02s ease;
+                -o-transition: all 0.2s 0.02s ease;
+                -webkit-transition: all 0.2s 0.02s ease;
+            font-size: 20px;
+            .bold;
+            text-transform: uppercase;
+            &:hover{
+                background-color: #FFA4A4;      
+            }
+        }
+        button#get_portfolio {
+            border: none;
+            background-color: transparent;
+            padding: 15px 33px;
+            color: #666666;
+                -moz-transition: all 0.2s 0.02s ease;
+                -o-transition: all 0.2s 0.02s ease;
+                -webkit-transition: all 0.2s 0.02s ease;
+            .bold;
+            text-transform: uppercase;
+            font-size: 20px;
+            border: 2px solid #FFC0C0;
+            margin-left: 10px;
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.4);
+            }
+        }
+    }
+}
+/*=========================    Виды постели    ===================*/
+section#types {
+    color: #666666;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    .section_header{
+        margin-bottom: 50px;
+    }
+    h4 {
+        text-transform: uppercase;
+        .med;
+        margin-top: 25px;
+    }
+    button#more_btn {
+        border: none;
+        color: #66cc66;
+            -moz-transition: all 0.2s 0.02s ease;
+            -o-transition: all 0.2s 0.02s ease;
+            -webkit-transition: all 0.2s 0.02s ease;
+        border: 2px solid #66cc66;
+        padding: 10px 15px;
+        background-color: transparent;
+        text-transform: uppercase;
+        .bold;
+        &:hover {
+            background-color: #66cc66;
+            color: #fff;
+        }
+    }
+    button#buy_btn {
+        border: none;
+        color: #fff;
+            -moz-transition: all 0.2s 0.02s ease;
+            -o-transition: all 0.2s 0.02s ease;
+            -webkit-transition: all 0.2s 0.02s ease;
+        border: 2px solid #66cc66;
+        padding: 10px 25px;
+        background-color: #66cc66;
+        text-transform: uppercase;
+        .bold;
+        &:hover {
+            background-color: #fff;
+            color: #66cc66;
+        }
+    }
+    .card {
+        padding: 5px;
+        border: 2px solid transparent;
+        margin-left: 30px;
+        margin-right: 30px;
+        &:hover {
+            border: 2px solid #b2e5b2;
+            background-color: #fafdfa;
+            -moz-transition: all 0.2s 0.04s ease;
+            -o-transition: all 0.2s 0.04s ease;
+            -webkit-transition: all 0.2s 0.04s ease;
+        }
+    }   
+}
+/*========================    Бесплатная консультация    ===========*/
+section#help {
+    padding-top: 65px;
+    padding-bottom: 50px;
+    h3 {
+        color: #FFC0C0;
+        text-transform: uppercase;
+        .bold;
+    }
+    p {
+        color: #666666;
+        .light;
+        font-size: 18px;
+    }
+    img {
+        margin-top: 25px;
+    }
+    button#free_consult {
+        border: none;
+        background-color: transparent;
+        color: #FFC0C0;
+            -moz-transition: all 0.2s 0.04s ease;
+            -o-transition: all 0.2s 0.04s ease;
+            -webkit-transition: all 0.2s 0.04s ease;
+        border: 2px solid #FFC0C0;
+        padding: 15px 35px;
+        .bold;
+        text-transform: uppercase;
+        &:hover {
+            background-color: #FFC0C0;
+            color: #fff;
+        }
+    }
+
+}
+/*==========================    Наша продукция   =================*/
+section#portfolio{
+    background-color: #fafdfa;
+    h2{
+        margin-bottom: 30px;
+    }
+    .slider{
+        margin-bottom: 30px;
+    }
+}
+/*============================    Отзывы    =========================*/
+section#feedback{
+    margin-bottom: 50px;
+    .feedback_slider{
+         box-shadow: 0px 0px 68px -23px #000000;
+    }
+    .section_header{
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    .item{
+        background-color: #f8f8f8;
+        padding: 15px;
+        h5{
+            margin-top: 25px;
+            .med;
+            font-size: 20px;
+            color: #666666;
+        }
+        a{
+            .med;
+            font-size: 15px;
+
+        }
+        p{
+            margin-top: 30px;
+            .light;
+            font-size: 18px;
+        }
+    }
+    .carousel-indicators{
+        bottom: -50px;
+    }
+    .carousel-indicators .active{
+        background-color: #FFC0C0;
+    }
+    .carousel-indicators li {
+        border: solid 1px #FFC0C0;
+    }
+
+}
+/*=============================    Футер    ==========================*/
+footer{
+    background-color: #525252;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    h1, h3{
+        .bold;
+        color: #fff;
+    }
+    a#VK{
+        color: #fff;
+        &:hover{
+            color: #fff;
+        }
+        .light;
+        font-size: 20px;
+        &:before{
+            margin-right: 10px;
+            content: '';
+            width: 18px;
+            height: 18px;
+            background: url(../img/logos/logo_vk.png) no-repeat center center;
+            display: inline-block;
+        }
+    }
+    a#FB{
+        color: #fff;
+        &:hover{
+            color: #fff;
+        }
+        .light;
+        font-size: 20px;
+        &:before{
+            margin-right: 10px;
+            content: '';
+            width: 18px;
+            height: 18px;
+            background: url(../img/logos/logo_fb.png) no-repeat center center;
+            display: inline-block;
+        }
+    }
+    a#Inst{
+        color: #fff;
+        &:hover{
+            color: #fff;
+        }
+        .light;
+        font-size: 20px;
+        &:before{
+            margin-right: 10px;
+            content: '';
+            width: 18px;
+            height: 18px;
+            background: url(../img/logos/logo_inst.png) no-repeat center center;
+            display: inline-block;
+        }
+    }
+    .numbers{
+        h4{
+            font-size: 20px;
+            .light;
+            padding-top: 6px;
+        }
+        a{
+            color: #fff;
+            &:hover{
+                color: #fff;
+            } 
+        }
+    }
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+}
+/*============================    Всплывающие окна    ==================================*/
+.modal{
+        margin-top: 10%;
+    }
+    .header_modal{
+        h5{
+            text-transform: uppercase;
+            color: #666666;
+            .bold;
+            text-align: center;
+        }
+    }
+    .modal-header{
+        margin-top: -50px;
+        border-bottom: none;
+        .close{
+            text-shadow: none;
+            color: #fff;
+            opacity: 0.8;
+            margin-right: -30px;
+        }
+    }
+    .modal-body{
+        border-radius: 0;
+        input[name="name"]{
+            margin-top: 5px;
+            padding: 15px;
+            padding-left: -10px;
+            .light;
+            opacity: 0.8;
+            &:hover,
+            &:focus{
+                opacity: 1;
+            }
+        }
+        textarea{
+            margin-top: 5px;
+            padding: 15px;
+            padding-left: -10px;
+            .light;
+            opacity: 0.8;
+            &:hover,
+            &:focus{
+                opacity: 1;
+            }
+        }
+        button[type="submit"]{
+            margin-top: 15px;
+            background-color: #FFC0C0;
+            color: #fff;
+            border: 1px solid #FFC0C0;
+            border-bottom: 2px solid #FFC0C0;
+            padding: 10px 35px;
+            text-transform: uppercase;
+            border-radius: 5px;
+            .bold;
+            &:hover{
+                background-color: #FFA3A3;
+            }
+        }
+    } 
+.info{
+    padding-top: 15px;
+    .light;
+    color: #666666;
+    font-size: 15px;
+}
+.price{
+    h4{
+    padding-left: 279px;
+    }
+}
+
+
+@import "media.less";
+
+
+
